@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TelatTrack | Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>TelatTrack</h1>
+      <p>Login untuk mengakses sistem</p>
+    </div>
+  </header>
+  <main class="container">
+    <section class="login-section">
+      <h2>Login</h2>
+      <form id="loginForm" class="form">
+        <label for="userType">Pilih Sebagai:</label>
+        <select id="userType" required>
+          <option value="">--Pilih--</option>
+          <option value="guru">Guru</option>
+          <option value="murid">Murid</option>
+        </select>
+
+        <label for="username">Nama Pengguna:</label>
+        <input type="text" id="username" placeholder="Masukkan nama" required>
+
+        <div id="nipSection" style="display: none;">
+          <label for="nip">Nomor Induk Pegawai (NIP):</label>
+          <input type="text" id="nip" placeholder="Masukkan NIP" required>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 TelatTrack</p>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+</html>

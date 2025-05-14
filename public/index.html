@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TelatTrack | Sistem Keterlambatan Siswa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>TelatTrack</h1>
+      <p id="userRole">Selamat datang, <span id="userName"></span></p>
+    </div>
+  </header>
+  <main class="container">
+    <!-- Tampilan untuk Guru -->
+    <section class="input-section" id="guruSection">
+      <h2>Catat Keterlambatan</h2>
+      <form id="lateForm" class="form">
+        <label for="studentName">Nama Siswa:</label>
+        <input type="text" id="studentName" required>
+
+        <label for="lateReason">Alasan Keterlambatan:</label>
+        <input type="text" id="lateReason" required>
+
+        <label for="lateTime">Waktu Keterlambatan:</label>
+        <input type="time" id="lateTime" required>
+
+        <button type="submit" class="btn">Simpan Keterlambatan</button>
+      </form>
+    </section>
+
+    <!-- Tampilan untuk Murid -->
+    <section class="record-section" id="muridSection">
+      <h2>Rekaman Keterlambatan Anda</h2>
+      <table id="recordTable" class="table">
+        <thead>
+          <tr>
+            <th>Nama Siswa</th>
+            <th>Alasan</th>
+            <th>Waktu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data Keterlambatan Murid Akan Ditambahkan Di Sini -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 TelatTrack</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <script>
+    // Ambil data login dari localStorage
+    const userType = localStorage.getItem("userType");
+    const username = localStorage.getItem("username");
+
+    document.getElementById("userName").textContent = username;
+
+    if (userType === "guru") {
+      document.getElementById("guruSection").style.display = "block";
+      document.getElementById("muridSection").style.display = "none";
+    } else {
+      document.getElementById("guruSection").style.display = "none";
+      document.getElementById("muridSection").style.display = "block";
+    }
+  </script>
+</body>
+</html>
