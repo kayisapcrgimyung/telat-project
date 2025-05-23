@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Tambah Data Keterlambatan</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('logo.png') }}">
   <style>
     body {
       font-family: 'Poppins', sans-serif;

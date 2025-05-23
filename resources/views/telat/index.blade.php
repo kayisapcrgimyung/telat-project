@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Form Keterlambatan</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('logo.png') }}">
   <style>
     * {
       box-sizing: border-box;
@@ -33,10 +34,11 @@
     .avatar {
       width: 100px;
       height: 100px;
-      background-color: #ccc;
       border-radius: 50%;
+      object-fit: cover;
       margin: 0 auto 20px auto;
     }
+
 
     h2 {
       color: #2a5298;
@@ -80,7 +82,7 @@
 <body>
 
   <div class="form-container">
-    <div class="avatar"></div>
+    <img src="{{ asset('person2.png') }}" alt="Avatar" class="avatar">
     <h2>Form Keterlambatan</h2>
 
     <form method="POST" action="{{ route('telat.kirim') }}">

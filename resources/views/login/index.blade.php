@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Login</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('logo.png') }}">
   <style>
     * {
       box-sizing: border-box;
@@ -30,10 +31,10 @@
     }
 
     .avatar {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      background-color: #b3a9a9;
+      object-fit: cover;
       margin: 0 auto 20px auto;
     }
 
@@ -91,7 +92,7 @@
 <body>
 
   <div class="login-container">
-    <div class="avatar"></div>
+    <img src="{{ asset('person2.png') }}" alt="Avatar" class="avatar">
     <h2>Login</h2>
 
     @if (session('error'))

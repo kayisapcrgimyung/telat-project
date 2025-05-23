@@ -7,8 +7,9 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\telatController;
 
 Route::get('/', function () {
-    return view('dashboard');
+    return redirect()->route('login.form');
 });
+
 
 Route::resource('gurumenu', guruMenuController::class);
 Route::resource('muridmenu', muridMenuController::class);

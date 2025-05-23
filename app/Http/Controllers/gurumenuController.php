@@ -31,11 +31,11 @@ class gurumenuController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
-        $gurumenu::create($request->all());
-        return redirect()->route('gurumenu.index');
-    }
+{
+    Telat::create($request->all());
+    return redirect()->route('gurumenu.index');
+}
+
 
     /**
      * Display the specified resource.
@@ -51,8 +51,8 @@ class gurumenuController extends Controller
     public function edit($id)
     {
         //
-        $gurumenu = guruMenu::findOrFail($id);
-    return view('gurumenu.edit', compact('gurumenu'));
+        $gurumenu = Telat::findOrFail($id);
+        return view('gurumenu.edit', compact('gurumenu'));
     }
 
     /**
@@ -61,7 +61,7 @@ class gurumenuController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $gurumenu = guruMenu::findOrFail($id);
+        $gurumenu = Telat::findOrFail($id);
         $gurumenu->update($request->all());
         return redirect()->route('gurumenu.index');
     }
@@ -72,7 +72,7 @@ class gurumenuController extends Controller
     public function destroy($id)
     {
         //
-        guruMenu::findOrFail($id)->delete();
-    return redirect()->route('gurumenu.index');
+        Telat::findOrFail($id)->delete();
+        return redirect()->route('gurumenu.index');
     }
 }
